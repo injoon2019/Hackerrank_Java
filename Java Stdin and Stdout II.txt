@@ -1,0 +1,25 @@
+/* Note: If you use the nextLine() method immediately following the nextInt() method, 
+recall that nextInt() reads integer tokens; because of this, 
+the last newline character for that line of integer input is still queued in the input buffer 
+and the next nextLine() will be reading the remainder of the integer line (which is empty).
+
+-> The problem is with the input.nextInt() method - it only reads the int value. 
+So when you continue reading with input.nextLine() you receive the "\n" Enter key. 
+So to skip this you have to add the input.nextLine(). Hope this should be clear now.
+import java.util.Scanner;*/ 
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int i = scan.nextInt();
+        double d = scan.nextDouble();
+        scan.nextLine();
+        String s = scan.nextLine();
+        // Write your code here.
+
+        System.out.println("String: " + s);
+        System.out.println("Double: " + d);
+        System.out.println("Int: " + i);
+    }
+}

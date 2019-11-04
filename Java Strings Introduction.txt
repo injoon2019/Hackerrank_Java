@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        String B=sc.next();
+        /* Enter your code here. Print output to STDOUT. */
+        int sum=0;
+        sum+= A.length();
+        sum+=B.length();
+        System.out.println(sum);
+        if(A.compareTo(B)>0)
+            System.out.println("Yes");
+        else
+            System.out.println("No");
+        String ans1="";
+        String ans2="";
+        if(A.charAt(0)>='a' && A.charAt(0)<='z')
+        {
+            ans1 += (char)(A.charAt(0)-32)+"";
+            ans1+= A.substring(1,A.length()); 
+        }
+        if(B.charAt(0)>='a' && B.charAt(0)<='z')
+        {
+            ans2 += (char)(B.charAt(0)-32)+"";
+            ans2+= B.substring(1,B.length()); 
+        }
+        System.out.println(ans1+" "+ans2);
+        
+    }
+}
